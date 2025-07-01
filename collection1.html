@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Collection - Jeet Davindra</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .collection-page {
+      padding: 100px 30px 60px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .collection-hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .collection-hero img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .collection-details {
+      max-width: 600px;
+    }
+
+    .collection-details h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .collection-details p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .collection-price {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #b8894c;
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background-color: #b8894c;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .collection-hero {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="collection-page">
+    <div class="collection-hero">
+      <img src="red dress.jpg" alt="Red Dress">
+
+      <div class="collection-details">
+        <h2>Limited Edition Red Draped Dress</h2>
+        <p>
+          Discover the bold elegance of our 2025 red couture collection. This asymmetric silhouette flows with elegance and structure. Designed using sustainable leather-alternative materials, this dress fuses modern fashion with timeless appeal.
+        </p>
+        <div class="collection-price">₹3,499</div>
+      </div>
+    </div>
+
+    <div class="back-btn">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+
+</body>
+</html>

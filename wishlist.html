@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishlist – Jeet Davindra</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wishlist-container {
+      padding: 100px 30px 50px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .wishlist-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .wishlist-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .wishlist-card {
+      position: relative;
+      width: 250px;
+      padding: 15px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .wishlist-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .wishlist-card h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .wishlist-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      color: red;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background-color: #b8894c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wishlist-container">
+    <h1 class="wishlist-header">Your Wishlist ❤️</h1>
+    <div class="wishlist-items" id="wishlist-items">
+      <!-- Wishlist products will appear here -->
+    </div>
+
+    <div class="back-btn">
+      <a href="index.html">← Back to Shop</a>
+    </div>
+  </div>
+
+  <script>
+    // Dummy product data (replace IDs, names, images as per your site)
+    const productData = {
+      "1": { name: "Cutwork Shirt", img: "Cutwork.jpg", price: "₹350" },
+      "2": { name: "Red Dress", img: "red dress.jpg", price: "₹999" },
+      "3": { name: "Anarkali", img: "anarkali.jpg", price: "₹1299" },
+      "4": { name: "ADORE Set", img: "ADORE.jpg", price: "₹1799" },
+      "5": { name: "Kurta", img: "1.jpg", price: "₹899" },
+      "6": { name: "Green Suit", img: "2.jpg", price: "₹799" },
+      "7": { name: "Elegant White", img: "3.jpg", price: "₹1099" }
+    };
+
+    function loadWishlist() {
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const container = document.getElementById("wishlist-items");
+
+      if (wishlist.length === 0) {
+        container.innerHTML = "<p>No items in wishlist.</p>";
+        return;
+      }
+
+      wishlist.forEach(id => {
+        const item = productData[id];
+        if (!item) return;
+
+        const card = document.createElement("div");
+        card.className = "wishlist-card";
+
+        card.innerHTML = `
+          <button class="remove-btn" data-id="${id}">×</button>
+          <img src="${item.img}" alt="${item.name}">
+          <h4>${item.name}</h4>
+          <p>${item.price}</p>
+        `;
+
+        container.appendChild(card);
+      });
+
+      // Add remove logic
+      document.querySelectorAll(".remove-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-id");
+          removeFromWishlist(id);
+        });
+      });
+    }
+
+    function removeFromWishlist(id) {
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      wishlist = wishlist.filter(item => item !== id);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      location.reload();
+    }
+
+    loadWishlist();
+  </script>
+
+</body>
+</html>

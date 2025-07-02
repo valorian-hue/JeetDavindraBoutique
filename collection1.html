@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>New Collection - Jeet Davindra</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
   <style>
     .collection-page {
       padding: 100px 30px 60px;
@@ -15,7 +17,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      align-items: center;
+      align-items: center; /* 🟢 Vertically center text */
       justify-content: center;
     }
 
@@ -28,6 +30,7 @@
 
     .collection-details {
       max-width: 600px;
+      flex: 1; /* Makes text and image share space evenly */
     }
 
     .collection-details h2 {
@@ -63,26 +66,36 @@
       font-size: 14px;
     }
 
+    /* Responsive Stack for Mobile */
     @media (max-width: 768px) {
       .collection-hero {
-        flex-direction: column;
+        flex-direction: column; /* 🔁 Stack image + text on mobile */
+      }
+
+      .collection-details, .collection-hero img {
+        max-width: 100%;
       }
     }
   </style>
 </head>
+
 <body>
 
   <section class="collection-page">
     <div class="collection-hero">
-      <img src="red dress.jpg" alt="Red Dress">
+      
+      <!-- IMAGE LEFT -->
+      <img src="simple kurta suit.jpg" alt="Simple Cotton Kurta Suit" />
 
+      <!-- TEXT RIGHT -->
       <div class="collection-details">
-        <h2>Limited Edition Red Draped Dress</h2>
+        <h2>SIMPLE COTTON KURTA SUIT</h2>
         <p>
-          Discover the bold elegance of our 2025 red couture collection. This asymmetric silhouette flows with elegance and structure. Designed using sustainable leather-alternative materials, this dress fuses modern fashion with timeless appeal.
+          A simple kurta suit is a minimalist and elegant ethnic outfit for women, featuring a plain or lightly embellished kurta (long tunic), paired with comfortable bottoms like churidars or palazzos, and often styled with a dupatta. Designed for everyday wear, office looks, or casual outings, it offers effortless grace and breathable comfort.
         </p>
-        <div class="collection-price">₹3,499</div>
+        <div class="collection-price">₹1500</div>
       </div>
+
     </div>
 
     <div class="back-btn">

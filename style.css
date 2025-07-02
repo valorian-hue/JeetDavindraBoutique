@@ -617,7 +617,7 @@ img:hover {
 }
 
 /* ✅ Mobile Responsive Enhancements */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .collection-body,
   .collection-body.reversed {
     flex-direction: column;

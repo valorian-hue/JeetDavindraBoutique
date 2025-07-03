@@ -616,3 +616,57 @@ img:hover {
   margin-top: 20px;
 }
 
+/* ✅ Mobile Responsive Enhancements */
+@media (max-width: 768px) {
+  .collection-body,
+  .collection-body.reversed {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .collection-text,
+  .collection-images {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .collection-body.reversed .main-img {
+    margin-top: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-text button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+ 
+.social-icons a i {
+  color: white !important;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  color: #b8894c; /* Gold on hover */
+  transform: scale(1.2);
+}

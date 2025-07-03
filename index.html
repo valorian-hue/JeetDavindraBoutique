@@ -12,17 +12,25 @@
 </head>
 <body>
 
-  <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-<div class="mobile-menu" id="mobile-menu">
-  <ul>
-    <li><a href="#">Shop</a></li>
-    <li><a href="#">New Arrivals</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="wishlist.html">Wishlist</a></li>
-  </ul>
+ <nav class="navbar">
+  <div class="logo">Logo</div>
+  <div class="nav-links">
+    <a href="#">Shop</a>
+    <a href="#">New Arrivals</a>
+    <a href="#">About</a>
+    <a href="#">Wishlist</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    &#9776; <!-- hamburger icon (☰) -->
+  </div>
+</nav>
+<!-- Mobile menu (hidden by default) -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Shop</a>
+  <a href="#">New Arrivals</a>
+  <a href="#">About</a>
+  <a href="#">Wishlist</a>
 </div>
-
   <div class="nav-left">
     <div class="search-wrapper">
       <span class="search-icon">🔍</span>
@@ -294,6 +302,20 @@ Explore our collection of traditional outfits for women and redefine your ethnic
 
   faders.forEach(el => {
     appearOnScroll.observe(el);
+  });
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Optionally, clicking a link closes the menu
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('active'));
   });
 </script>
 

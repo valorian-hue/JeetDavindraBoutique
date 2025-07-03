@@ -284,3 +284,56 @@ a:hover {
   color: #aaa;
   border-top: 1px solid #333;
 }
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  .logo {
+    position: static;
+    transform: none;
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .nav-left, .nav-right {
+    flex: unset;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .collection-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .hero-text h1 {
+    font-size: 22px;
+  }
+  .collection-images .main-img,
+  .sub-img img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer {
+    padding: 30px 10px 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

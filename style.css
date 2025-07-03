@@ -293,8 +293,8 @@ a:hover {
 /* =================== RESPONSIVE DESIGN =================== */
 @media (max-width: 768px) {
 .logo {
-    font-size: 10px;
-    top: 20px;
+    font-size: 5px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;

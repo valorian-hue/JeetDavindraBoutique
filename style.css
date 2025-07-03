@@ -292,9 +292,15 @@ a:hover {
 
 /* =================== RESPONSIVE DESIGN =================== */
 @media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 28px;
+.logo {
+    font-size: 20px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
   }
+}
+
 
   .hero-text button {
     padding: 10px 20px;

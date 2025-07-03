@@ -284,6 +284,8 @@ a:hover {
   color: #aaa;
   border-top: 1px solid #333;
 }
+
+/* Responsive Styles for Tablets and Below */
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
@@ -310,6 +312,7 @@ a:hover {
   }
 }
 
+/* Responsive Styles for Phones */
 @media (max-width: 600px) {
   .hero-container {
     width: 100%;
@@ -332,6 +335,7 @@ a:hover {
   }
 }
 
+/* Make all images responsive */
 img {
   max-width: 100%;
   height: auto;

@@ -307,26 +307,50 @@ a:hover {
     font-size: 14px;
   }
 
-  .collection-body,
+   .collection-body,
   .collection-body.reversed {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 10px;
   }
 
-  .collection-images,
-  .collection-text {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-column {
+  .collection-images {
+    width: 100%;
     max-width: 100%;
     text-align: center;
+  }
+
+  .collection-images .main-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    object-fit: contain;
+  }
+
+  .collection-text {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    max-width: 100%;
+  }
+
+  .collection-text p {
+    font-size: 10px;
+  }
+
+  .sub-images {
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .sub-img {
+    max-width: 140px;
+  }
+
+  .sub-img img {
+    width: 100%;
+    height: auto;
   }
 }

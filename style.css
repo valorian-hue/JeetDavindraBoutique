@@ -178,6 +178,10 @@ a:hover {
   font-size: 14px;
 }
 
+
+  max-width: 500px;
+}
+
 /* COLLECTIONS */
 .collection-body {
   display: flex;
@@ -195,7 +199,6 @@ a:hover {
 .collection-images,
 .collection-text {
   flex: 1;
-  max-width: 500px;
 }
 
 .collection-images .main-img {

@@ -47,6 +47,8 @@ a:hover {
   letter-spacing: 2px;
   color: #222;
   text-transform: uppercase;
+  white-space: nowrap;      
+  font-size: 30px;  
 }
 
 .nav-left,
@@ -375,29 +377,49 @@ a:hover {
     font-size: 10px;
   }
 }
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #222;
-  text-transform: uppercase;
-  white-space: nowrap;      
-  font-size: 30px;         
+/* Hero Text Responsive Styling */
+.hero-text h1 {
+  font-size: 50px;
+  margin: 0;
 }
 
+.hero-text p {
+  font-size: 18px;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* ✅ Smaller screens */
 @media (max-width: 768px) {
-  .logo {
-    font-size: 20px;
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-text button {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .logo {
-    font-size: 16px;
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .hero-text button {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
 

@@ -341,3 +341,42 @@ img {
   height: auto;
   display: block;
 }
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 80px; /* Adjust according to navbar height */
+  right: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 18px 0;
+}
+
+.mobile-menu a {
+  padding: 12px 24px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-menu.active {
+    display: flex;
+  }
+}

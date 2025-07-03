@@ -1,1 +1,1 @@
-https://github.com/valorian-hue/JeetDavindraBoutique
+https://github.com/valorian-hue/JeetDavindraBoutique/

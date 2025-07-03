@@ -361,8 +361,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .logo {
-    font-size: 18px;  /* Smaller size for mobile */
-    white-space: nowrap; /* Prevent line break */
+    font-size: 12px;  
+    white-space: nowrap; 
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
@@ -372,6 +372,6 @@ a:hover {
 
 @media (max-width: 480px) {
   .logo {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
